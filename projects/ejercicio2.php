@@ -11,4 +11,17 @@ echo "<br>";
 echo $_SERVER['REMOTE_ADDR'];
 echo "<br>";
 
+print_r($_SERVER);
+echo "<br>";
+
+var_dump($_SERVER);
+echo "<br>";
+
+
+foreach ($_SERVER as $key => $value) {
+    
+        echo "$key : $value";
+        echo "<br/>";
+    }
+
 ?>
