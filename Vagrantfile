@@ -14,11 +14,4 @@ Vagrant.configure("2") do |config|
   app.vm.provision "shell", path: "provision/provision_nginx.sh"
 end
 
-  # MySQL Server
-  config.vm.define "db" do |app|
-    app.vm.hostname = "db"
-    app.vm.network "private_network", ip: "192.168.33.13"
-    app.vm.provision "shell", path: "provision/provision-for-mysql.sh"
-  end
-
 end
