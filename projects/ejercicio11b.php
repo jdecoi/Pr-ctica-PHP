@@ -58,35 +58,27 @@ $monedas = array();
 for($i = 0; $i < $numero_monedas; $i++) {
     $monedas[$i] = rand(0, 1);
 }
-print_r($monedas);
+
+$images = array();
+$images["1"]["cara"] = 'imagenes/moneda1.png';
+$images["1"]["cruz"] = 'imagenes/moneda2.png';
+$images["2"]["cara"] = 'imagenes/dolar1.png';
+$images["2"]["cruz"] = 'imagenes/dolar2.jpg';
+$images["3"]["cara"] = 'imagenes/korona1.jpg';
+$images["3"]["cruz"] = 'imagenes/korona2.png';
+$images["4"]["cara"] = 'imagenes/yen1.jpg';
+$images["4"]["cruz"] = 'imagenes/yen2.jpg';
+$images["5"]["cara"] = 'imagenes/peso1.png';
+$images["5"]["cruz"] = 'imagenes/peso2.jpg';
+
 for($x = 0; $x < $numero_monedas; $x++) {
     if( $monedas[$x] == 0) {
-        if($tipo_monedas == 1){
-            echo "<img src=\"imagenes/moneda1.png\" width=\"200\ height\"200\">";
-        } elseif ($tipo_monedas == 2) {
-            echo "<img src=\"imagenes/dolar1.png\" width=\"200\ height\"200\">";
-        } elseif ($tipo_monedas == 3) {
-            echo "<img src=\"imagenes/korona1.jpg\" width=\"200\ height\"200\">";
-        } elseif ($tipo_monedas == 4) {
-            echo "<img src=\"imagenes/yen1.jpg\" width=\"200\ height\"200\">";
-        } elseif ($tipo_monedas == 5) {
-            echo "<img src=\"imagenes/peso1.png\" width=\"200\ height\"200\">";
-        } 
+        echo "<img src=\"".$images[$tipo_monedas]["cara"]."\" width=\"200\" height\"200\">";
     } else {
-        if($tipo_monedas == 1){
-            echo "<img src=\"imagenes/moneda2.png\" width=\"200\ height\"200\">";
-        } elseif ($tipo_monedas == 2) {
-            echo "<img src=\"imagenes/dolar2.jpg\" width=\"200\ height\"200\">";
-        } elseif ($tipo_monedas == 3) {
-            echo "<img src=\"imagenes/korona2.png\" width=\"200\ height\"200\">";
-        } elseif ($tipo_monedas == 4) {
-            echo "<img src=\"imagenes/yen2.jpg\" width=\"200\ height\"200\">";
-        } elseif ($tipo_monedas == 5) {
-            echo "<img src=\"imagenes/peso2.jpg\" width=\"200\ height\"200\">";
-        }
-    }
-
+        echo "<img src=\"".$images[$tipo_monedas]["cruz"]."\" width=\"200\" height\"200\">";
+    }    
 }
+
 ?>
 
 </body> 
