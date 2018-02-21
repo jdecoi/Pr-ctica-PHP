@@ -2,14 +2,14 @@
 <html>
 <head>
 <meta charset="uft-8" />
-<title>practica8</title>
+<title>practica14</title>
 </head>
 <body>
 
 <form method="post">
 
 <div>
-    <label for="puntos">Puntos: </label>
+    <label for="puntos">Nota: </label>
     <input type="int" name="puntos">
 </div>
 
@@ -21,7 +21,7 @@
 
 $vari = $_POST["puntos"];
 
-if(!empty($vari)) {
+if(isset($vari)) {
     if($vari>=0 && $vari<5) {
         echo "Insuficiente";
     }    
@@ -34,14 +34,17 @@ if(!empty($vari)) {
     elseif($vari>=7 && $vari<9) {
             echo "notable";
         } 
-     elseif($vari>=9 && $vari<10) {
+    elseif($vari>=9 && $vari<=10) {
             echo "Sobresaliente";
-        }    
+        } 
+    else {
+            echo "Introduce una nota entre el 0 y el 10";
+        }       
 
 echo "</br>";
 echo "</br>";
 
-echo "Puntos: $vari";
+echo "Nota: $vari";
 
     }
 
