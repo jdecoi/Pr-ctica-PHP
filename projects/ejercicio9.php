@@ -13,7 +13,7 @@
     <input type="int" name="num">
 </div>
 
-<button type="submit">Calcularr</button>
+<button type="submit">Calcular</button>
 
 </form>
 
